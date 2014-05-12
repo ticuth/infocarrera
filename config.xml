@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ticuthermosillo.info" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Info Carrera</name>
+    <description>
+        Info. carrera TIC.
+    </description>
+    <author email="tic@uthermosillo.edu.mx" href="http://www.tic-uth.net/moodle/">
+        TIC Universidad Tecnologica de Hermosillo
+    </author>
+    <preference name="orientation" value="landscape" />
+    <icon src="icon.png"/>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
