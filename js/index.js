@@ -34,6 +34,27 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+		$.ajax({
+			dataType: 'json',
+			url: 'http://www.tic-uth.net',
+			data: {},
+		}).done(function(data){
+			var tot = data.news.length;
+			var shtml = [];
+			for(var i = 0;i < tot; i ++) {
+				shtml+= '<div>'+data.news[i].fecha + ' ' + data.news[i].text+'<br>';
+				for(var f = 0 ;f < data.news[i].files.length; f++){
+					shtml+='<ul>';
+					shtml+='<li>'+data.news[i].files[f]+'</li>';
+					shtml+='</ul>';
+				}
+				//shtml+= data.news[i].
+				shtml+='</div>';
+			}
+			$('#divInfo').html(shtml);
+		}).error(function(){
+		});
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
