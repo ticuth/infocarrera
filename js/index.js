@@ -36,7 +36,7 @@ var app = {
         app.receivedEvent('deviceready');
 		$.ajax({
 			dataType: 'json',
-			url: 'http://www.tic-uth.net',
+			url: 'http://www.tic-uth.net/gflores/ticinfo/',
 			data: {},
 		}).done(function(data){
 			var tot = data.news.length;
