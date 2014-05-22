@@ -39,19 +39,26 @@ var app = {
 			url: 'http://www.tic-uth.net/gflores/ticinfo/',
 			data: {},
 		}).done(function(data){
+            console.log(data);
 			var tot = data.news.length;
-			var shtml = [];
+			var shtml = [], sf="";
 			for(var i = 0;i < tot; i ++) {
-				shtml+= '<div>'+data.news[i].fecha + ' ' + data.news[i].text+'<br>';
+				shtml.push('<div>'+data.news[i].fecha + ' ' + data.news[i].text+'<br>');
+                shtml.push('<ul>');
 				for(var f = 0 ;f < data.news[i].files.length; f++){
-					shtml+='<ul>';
-					shtml+='<li>'+data.news[i].files[f]+'</li>';
-					shtml+='</ul>';
+					
+                    sf = data.news[i].files[f];
+                    
+					shtml.push('<li>Archivo: <a href="'+sf+'">'+sf+'</a></li>');
+					
 				}
+                shtml.push('</ul>');
 				//shtml+= data.news[i].
-				shtml+='</div>';
+				shtml.push('</div>');
 			}
-			$('#divInfo').html(shtml);
+            console.log(shtml);
+			$('#divInfo').html(shtml.join('\n'));
+            
 		}).error(function(){
 		});
 
