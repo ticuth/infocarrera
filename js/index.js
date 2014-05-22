@@ -42,14 +42,22 @@ var app = {
             console.log(data);
 			var tot = data.news.length;
 			var shtml = [], sf="";
+            var archivo = "";
+            var esArchivo = false;
 			for(var i = 0;i < tot; i ++) {
 				shtml.push('<div>'+data.news[i].fecha + ' ' + data.news[i].text+'<br>');
                 shtml.push('<ul>');
+                
 				for(var f = 0 ;f < data.news[i].files.length; f++){
-					
                     sf = data.news[i].files[f];
                     
-					shtml.push('<li>Archivo: <a href="'+sf+'">'+sf+'</a></li>');
+                    archivo = sf.substring(sf.lastIndexOf('/')+1,sf.length);
+                    esArchivo = (sf.indexOf('.doc')>0)||(sf.indexOf('.pdf')>0)
+                    if (esArchivo){
+                        shtml.push('<li>Archivo: <a href="'+sf+'">'+archivo+'</a></li>');
+                    }else{
+                        shtml.push('<li>Liga: <a href="'+sf+'">'+sf+'</a></li>');
+                    }
 					
 				}
                 shtml.push('</ul>');
