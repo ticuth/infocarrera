@@ -1,7 +1,25 @@
+body {
+    background-color: #F6F6F6;
+    color: #777777;
+}
+a {
+    color: #777777;
+    text-decoration: none;
+}
+a:hover{
+    color: #777777
+}
+a:visited{
+    color: #777777
+}
 .app {
     text-align: center;
+    height: 100%;
 }
 
+
 #divInfo {
+    
     text-align: justify;
+    overflow-y: auto;
 }
