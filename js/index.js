@@ -54,9 +54,9 @@ var app = {
                     archivo = sf.substring(sf.lastIndexOf('/')+1,sf.length);
                     esArchivo = (sf.indexOf('.doc')>0)||(sf.indexOf('.pdf')>0)
                     if (esArchivo){
-                        shtml.push('<li>Archivo: <a href="'+sf+'">'+archivo+'</a></li>');
+                        shtml.push('<li>Archivo: <a href="#" onclick="navigator.app.loadUrl(\"'+sf+'\", {openExternal : true});">'+archivo+'</a></li>');
                     }else{
-                        shtml.push('<li>Liga: <a href="'+sf+'">'+sf+'</a></li>');
+                        shtml.push('<li>Liga: <a href="#" onclick="navigator.app.loadUrl(\"'+sf+'\", {openExternal : true});">'+sf+'</a></li>');
                     }
 					
 				}
