@@ -1,6 +1,8 @@
 body {
-    background-color: #F6F6F6;
+    
     color: #777777;
+    font-family: sans-serif;
+    margin: 0;
 }
 a {
     color: #777777;
@@ -13,13 +15,31 @@ a:visited{
     color: #777777
 }
 .app {
-    text-align: center;
     height: 100%;
+    width: 100%;
 }
 
-
+#appmenu{
+    background-color: #F6F6F6;
+}
 #divInfo {
-    
     text-align: justify;
     overflow-y: auto;
+    color: #000000;
+}
+.bloque1 {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 20%;
+    
+}
+.bloque2 {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 80%;
+    
 }

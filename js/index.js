@@ -61,6 +61,15 @@ var app = {
 		}).error(function(){
 		});
     },
+    getPageInto: function(url,whereto){
+		$.ajax({
+			dataType: 'text',
+			url: url,
+        }).success(function(data){
+            $(whereto).html(data);
+        });
+        
+    },
     getPage: function(url){
 		$.ajax({
 			dataType: 'text',
@@ -83,7 +92,8 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         /*app.receivedEvent('deviceready');*/
-        app.getPage('content/menu.html');
+        app.getPageInto('content/menu.html','#appmenu');
+        app.getPageInto('content/principal.html','#divInfo');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
