@@ -21,6 +21,9 @@ var app = {
     initialize: function() {
         this.bindEvents();
     },
+    openExternal: function (url) {
+        navigator.app.loadUrl(url, {openExternal : true});  
+    },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -54,9 +57,9 @@ var app = {
                     archivo = sf.substring(sf.lastIndexOf('/')+1,sf.length);
                     esArchivo = (sf.indexOf('.doc')>0)||(sf.indexOf('.pdf')>0)
                     if (esArchivo){
-                        shtml.push('<li>Archivo: <a href="#" onclick="navigator.app.loadUrl(\"'+sf+'\", {openExternal : true});">'+archivo+'</a></li>');
+                        shtml.push('<li>Archivo: <a href="#" onclick="app.openExternal(\"'+sf+'\"">'+archivo+'</a></li>');
                     }else{
-                        shtml.push('<li>Liga: <a href="#" onclick="navigator.app.loadUrl(\"'+sf+'\", {openExternal : true});">'+sf+'</a></li>');
+                        shtml.push('<li>Liga: <a href="#" onclick="app.openExternal(\"'+sf+'\"">">'+sf+'</a></li>');
                     }
 					
 				}
