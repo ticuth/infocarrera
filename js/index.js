@@ -25,6 +25,7 @@ var app = {
         navigator.app.loadUrl(url, {openExternal : true});  
     },
     getExternalData: function(){
+        $('#divInfo').html('Conectando con servidor...');
 		$.ajax({
 			dataType: 'json',
 			url: 'http://www.tic-uth.net/gflores/ticinfo/',
@@ -59,6 +60,7 @@ var app = {
 			$('#divInfo').html(shtml.join('\n'));
             
 		}).error(function(){
+            $('#divInfo').html('Error al conectar');
 		});
     },
     getPageInto: function(url,whereto){
