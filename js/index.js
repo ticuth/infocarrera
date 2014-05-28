@@ -24,19 +24,7 @@ var app = {
     openExternal: function (url) {
         navigator.app.loadUrl(url, {openExternal : true});  
     },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+    getExternalData: function(){
 		$.ajax({
 			dataType: 'json',
 			url: 'http://www.tic-uth.net/gflores/ticinfo/',
@@ -72,7 +60,30 @@ var app = {
             
 		}).error(function(){
 		});
-
+    },
+    getPage: function(url){
+		$.ajax({
+			dataType: 'text',
+			url: url,
+        }).success(function(data){
+            $('#divInfo').html(data);
+        });
+        
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicity call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        /*app.receivedEvent('deviceready');*/
+        app.getPage('content/menu.html');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
