@@ -24,7 +24,7 @@ a:visited{
 }
 #divInfo {
     text-align: justify;
-    overflow-y: auto;
+    overflow-y: scroll;
     height:100%;
     color: #000000;
 }
