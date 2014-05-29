@@ -1,14 +1,9 @@
-@media
-only screen and (-webkit-min-device-pixel-ratio : 2),
-only screen and (min-device-pixel-ratio : 2) {
-/* Styles */
-body {-webkit-text-size-adjust:100%}
- 
- 
-}/*end iphone4 and ipad3 */
+
+
 
 body {
-    
+    -webkit-text-size-adjust:100%;
+        
     color: #777777;
     font-family: sans-serif;
     /*margin: 0;*/
