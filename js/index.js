@@ -18,14 +18,23 @@
  */
 var app = {
     // Application Constructor
+    myScroll: {},
     initialize: function() {
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        app.myScroll =  new IScroll('#divInfo', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
         this.bindEvents();
     },
     openExternal: function (url) {
         navigator.app.loadUrl(url, {openExternal : true});  
     },
     getExternalData: function(){
-        $('#divInfo').html('Conectando con servidor...');
+        $('#scroller').html('Conectando con servidor...');
 		$.ajax({
 			dataType: 'json',
 			url: 'http://www.tic-uth.net/gflores/ticinfo/',
@@ -57,10 +66,10 @@ var app = {
 				shtml.push('</div>');
 			}
             console.log(shtml);
-			$('#divInfo').html(shtml.join('\n'));
+			$('#scroller').html(shtml.join('\n'));
             
 		}).error(function(){
-            $('#divInfo').html('Error al conectar');
+            $('#scroller').html('Error al conectar');
 		});
     },
     getPageInto: function(url,whereto){
@@ -77,7 +86,7 @@ var app = {
 			dataType: 'text',
 			url: url,
         }).success(function(data){
-            $('#divInfo').html(data);
+            $('#scroller').html(data);
         });
         
     },
@@ -95,7 +104,7 @@ var app = {
     onDeviceReady: function() {
         /*app.receivedEvent('deviceready');*/
         app.getPageInto('content/menu.html','#appmenu');
-        app.getPageInto('content/principal.html','#divInfo');
+        app.getPageInto('content/principal.html','#scroller');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
