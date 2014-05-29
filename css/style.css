@@ -25,6 +25,7 @@ a:visited{
 #divInfo {
     text-align: justify;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     height:100%;
     color: #000000;
 }
