@@ -2,9 +2,15 @@ body {
     
     color: #777777;
     font-family: sans-serif;
-    margin: 0;
-    overflow: hidden;
+    /*margin: 0;*/
+    /*overflow: hidden;*/
+    min-height: 2000px;
+    padding-top: 70px;
+
 }
+
+
+
 a {
     color: #777777;
     text-decoration: none;
@@ -25,27 +31,14 @@ a:visited{
 }
 #divInfo {
     text-align: justify;
-    overflow-y: hidden;
+    
     height:100%;
     color: #000000;
-}
-.bloque1 {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    width: 40%;
     
 }
-.bloque2 {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 60%;
-    
-}
-#scroller {
+.row {
     height: 100%;
-    overflow-y: scroll;
+}
+.bloque2{
+    height: auto;
 }

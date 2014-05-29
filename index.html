@@ -8,18 +8,59 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script type="text/javascript" src="js/iscroll/iscroll.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <link href="lib/tb/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .icon-bar{display:block;width:22px;height:2px;border-radius:1px;background-color: black;}
+        </style>
         <title>INFO TIC</title>
     </head>
     <body>
-        <div class="app">
-            <div id="appheader">
-                <div class="bloque1" id="appmenu"></div>
-                <div class="bloque2" id='divInfo'>
-                    <div id='scroller'></div>
-                </div>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#" class="navbar-brand"><img src="img/logouth.gif"></a>
             </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="#" onclick="app.getPage('content/principal.html')">Inicio</a>
+                </li>
+                <li>
+                  <a href="#" onclick="app.getPage('content/quienessomos.html')">Quienes somos</a>
+                </li>
+                <li>
+                  <a href="#" onclick="app.getPage('content/infocarrera.html')">Info. Carrera</a>
+                </li>
+                <li>
+                  <a href="#" onclick="app.getPage('content/cursos.html')">Cursos</a>
+                </li>
+                <li>
+                  <a href="#" onclick="app.getExternalData()">Noticias</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!--<li><a href="http://expo.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);">Expo</a></li>
+                <li><a href="http://blog.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);">Blog</a></li>-->
+              </ul>
+            </nav>
+          </div>
+        </div>
+        
+        
+        <div class="app bs-docs-header" id="container">
+            <div id='divInfo' class="container">
+                <div id='scroller'></div>
+            </div>
+            
         </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script src="lib/tb/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
