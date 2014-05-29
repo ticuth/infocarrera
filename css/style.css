@@ -3,6 +3,7 @@ body {
     color: #777777;
     font-family: sans-serif;
     margin: 0;
+    overflow: hidden;
 }
 a {
     color: #777777;
@@ -43,4 +44,8 @@ a:visited{
     right: 0px;
     width: 60%;
     
+}
+#scroller {
+    height: 100%;
+    overflow-y: scroll;
 }

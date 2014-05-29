@@ -20,14 +20,14 @@ var app = {
     // Application Constructor
     myScroll: {},
     initialize: function() {
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        /*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
         app.myScroll =  new IScroll('#divInfo', {
             scrollbars: true,
             mouseWheel: true,
             interactiveScrollbars: true,
             shrinkScrollbars: 'scale',
             fadeScrollbars: true
-        });
+        });*/
         this.bindEvents();
     },
     openExternal: function (url) {
