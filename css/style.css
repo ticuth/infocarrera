@@ -1,11 +1,10 @@
 
 
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 
 body {
-    -webkit-text-size-adjust:100%;
         
     color: #777777;
-    font-family: sans-serif;
     /*margin: 0;*/
     /*overflow: hidden;*/
     min-height: 2000px;
@@ -13,6 +12,13 @@ body {
 
 }
 
+media="screen"
+* {
+-webkit-text-size-adjust: none;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
 
 
 a {
