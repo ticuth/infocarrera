@@ -7,9 +7,10 @@ body {
     color: #777777;
     /*margin: 0;*/
     /*overflow: hidden;*/
-    min-height: 2000px;
+    /*min-height: 2000px;*/
     padding-top: 90px;
-
+    
+    font-size-adjust: auto;
 }
 
 media="screen"
