@@ -17,10 +17,10 @@
         <title>INFO TIC</title>
     </head>
     <body>
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
-              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <button id="nav-toggle" class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -28,7 +28,7 @@
               </button>
               <a href="#" class="navbar-brand"><img src="img/logouth.gif"></a>
             </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <div id="nav-collapse" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
                 <li>
                   <a href="#" onclick="app.getPage('content/principal.html')">Inicio</a>
@@ -50,7 +50,7 @@
                 <!--<li><a href="http://expo.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);">Expo</a></li>
                 <li><a href="http://blog.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);">Blog</a></li>-->
               </ul>
-            </nav>
+            </div>
           </div>
         </div>
         
