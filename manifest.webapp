@@ -1,0 +1,28 @@
+{
+    "version": "1.2",
+    "name": "TicInfo",
+    "description": "Info. de carrera de TIC en UTHermosillo",
+    "launch_path": "/index.html",
+    "orientation": ["portrait"],
+    "icons": {
+        "128": "/icon.png"
+    },
+    "developer": {
+        "name": "Gustavo Adolfo Flores González",
+        "url": "http://www.tic-uth.net/gflores/"
+    },
+    "installs_allowed_from": ["*"],
+    "locales": {
+        "en": {
+            "description": "TIC UTH info - Gustavo Flores",
+            "developer": {
+				"name": "Gustavo Adolfo Flores González",
+				"url": "http://www.tic-uth.net/gflores/"
+            }
+        }
+    },
+    "default_locale": "es",
+    "permissions": {     
+    },
+    "fullscreen": "true"
+}

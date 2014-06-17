@@ -1,10 +1,27 @@
+.logouth {
+    height:35px;
+}
 
+.imageviewer {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+}
+
+#scroller {
+    color: #777;
+}
+.titulo {
+    font-size: 11pt;
+    font-weight: bolder;
+    
+}
 
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 
 body {
         
-    color: #777777;
+    /*color: #777777;*/
     /*margin: 0;*/
     /*overflow: hidden;*/
     /*min-height: 2000px;*/
