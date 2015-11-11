@@ -10,5 +10,6 @@
     <preference name="orientation" value="portrait" />
     <icon src="icon.png"/>
     <content src="index.html" />
+      <allow-navigation href="*"/>
     <access origin="*" subdomains="*"/>
 </widget>
