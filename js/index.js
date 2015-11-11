@@ -62,7 +62,7 @@ var app = {
         $('#scroller').html('Conectando con servidor...');
 		$.ajax({
 			dataType: 'json',
-			url: 'http://darkuskyo.net/apps/?firefoxos=yes',
+			url: 'http://darkuskyo.net/apps/index.php?firefoxos=yes',
 			data: {}
 		}).done(function (data) {
             console.log(data);
